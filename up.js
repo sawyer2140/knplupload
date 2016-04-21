@@ -9,7 +9,7 @@ function AliOSS(signatureURL, type, chooseFileBtnId, progressId, func, width,id)
     _oss = {};
     _width = width;
 
-    var xmlhttp = null;
+    var xmlhttp = null ;
 
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
