@@ -2,12 +2,13 @@
  * Created by sawyer on 16/4/18.
  */
 
-function AliOSS(signatureURL, type, chooseFileBtnId, progressId, func, width,id) {
+function AliOSS(signatureURL, type, chooseFileBtnId, progressId, func, width,showFileId) {
 
     this._SignatureURL = signatureURL;
     this._type = type;
     _oss = {};
     _width = width;
+    _showFileId = showFileId;
 
     var xmlhttp = null ;
 
@@ -69,7 +70,7 @@ function AliOSS(signatureURL, type, chooseFileBtnId, progressId, func, width,id)
             FilesAdded: function (up, files) {
 
                 _filename = files[0].name;
-                document.getElementById("ddd").innerHTML("dddd");
+                document.getElementById(_showFileId).innerHTML(_filename);
             },
 
             FileUploaded: function (up, file, info) {
